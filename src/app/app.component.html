@@ -1,0 +1,14 @@
+
+<!-- <app-dashboardcomponent (update)="show($event)"></app-dashboardcomponent> -->
+
+<nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-success" >
+        
+      <a class="navbar-brand" [routerLink]="['/welcome']">Welcome</a>
+       
+    <a class="navbar-brand" [routerLink]="['/students']">Students</a>
+
+    <a class="navbar-brand" [routerLink]="['/album']">Album</a>
+    <a class="navbar-brand" [routerLink]="['/person']">Persons</a>
+        
+      </nav>
+      <router-outlet></router-outlet>

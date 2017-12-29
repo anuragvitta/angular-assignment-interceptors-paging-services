@@ -1,0 +1,22 @@
+
+<!--<div class="form-group">
+    <div class="col-xs-2">
+    <label for="sel1">Select list:</label>
+    <select class="form-control" id="sel1" #ash (change)="display(ash.value)">
+      <option value="">select</option>
+      <option value="10">10</option>
+      <option value="20">20</option>
+      <option value="30">30</option>
+    </select>
+  </div></div>-->
+  <label for="name">Enter number of images to get</label>
+  <input type="number" name="name" #show>
+  <button (click)="display(show.value)">GetData!!</button>
+  <table><br/>
+    <tr>
+      <th *ngFor="let a of albums|paginate:{itemsPerPage:5,currentPage:pi}" scope="col">
+  <img src={{a.thumbnailUrl}} (click)="displayimage(a.url)"/></th></tr></table>
+<div *ngIf="x">
+<img src={{x}}/>
+</div>
+<pagination-controls (pageChange)="pi=$event" class="pos1"></pagination-controls>

@@ -1,0 +1,37 @@
+<input type="number" #show>
+<button (click)="display(show.value)">GetData!!</button>
+<div *ngIf="persons">
+<div class="card a" style="width: 50rem" >
+    <div class="card-body" style="background-color:#ffffff;">
+  <div style="padding:20px;">
+      <h2 align="center">Person Details</h2>
+      <br/>
+      <table class="table" align="center">
+          <tbody>
+  
+            <tr>
+                <td>Person Name</td>
+                <td>{{persons.name}}</td>
+              </tr>
+              <tr>
+                  <td>Person Company</td>
+                  <td>{{persons.company.name}}</td>
+                </tr>
+                <tr>
+                    <td>Person Username</td>
+                    <td>{{persons.username}}</td>
+                  </tr>
+                  <tr>
+                      <td>Person city</td>
+                      <td>{{persons.address.city}}</td>
+                    </tr>
+                    <tr>
+                        <td>Person phone</td>
+                        <td>{{persons.phone}}</td>
+                      </tr>
+          </tbody>
+        </table>
+  
+  </div>
+  </div>
+</div>
