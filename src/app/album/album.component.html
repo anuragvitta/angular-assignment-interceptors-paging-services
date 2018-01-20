@@ -14,9 +14,9 @@
   <button (click)="display(show.value)">GetData!!</button>
   <table><br/>
     <tr>
-      <th *ngFor="let a of albums|paginate:{itemsPerPage:5,currentPage:pi}" scope="col">
-  <img src={{a.thumbnailUrl}} (click)="displayimage(a.url)"/></th></tr></table>
-<div *ngIf="x">
-<img src={{x}}/>
+      <th *ngFor="let image of albums|paginate:{itemsPerPage:5,currentPage:pageindex}" scope="col">
+  <img src={{image.thumbnailUrl}} (click)="displayimage(image.url)"/></th></tr></table>
+<div *ngIf="clickedimage">
+<img src={{clickedimage}}/>
 </div>
-<pagination-controls (pageChange)="pi=$event" class="pos1"></pagination-controls>
+<pagination-controls (pageChange)="pageindex=$event" class="pos1"></pagination-controls>
