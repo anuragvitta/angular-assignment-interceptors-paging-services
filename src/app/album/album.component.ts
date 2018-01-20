@@ -14,7 +14,7 @@ response:  Ialbums[];
 start: number;
 limit: number;
 clickedimage: any;
-//pi: number = 1;
+pageindex: number = 1;
   constructor(private albumservice: AlbumService) {
    // this.albums = this.albumservice.getImages(10,5);
   //this.start = 0;
