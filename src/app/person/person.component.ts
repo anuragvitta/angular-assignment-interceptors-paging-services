@@ -14,13 +14,13 @@ response: Ipersons[];
 
   ngOnInit() {
   }
-display(a)
+display(personid)
 {
-  if(a<0||a>10)
+  if(personid<0||personid>10)
   {
     alert("enter positive and max number is 10");
   }
-  this.albumservice.getPersons(a).subscribe(response => {
+  this.albumservice.getPersons(personid).subscribe(response => {
     this.persons = response;
 });
 }
