@@ -11,7 +11,7 @@ export class DetailsComponent implements OnInit {
 id1: any;
 sub: any;
 name: string;
-a: any;
+//a: any;
 branch:  string;
 favlang: string;
 percentage: any;
@@ -22,7 +22,7 @@ aspirants: Iaspirants[];
     this.sub = this.route.params.subscribe(params => {
       this.id1 = params['id'];
       this.aspirants = this.dataservice.getaspirants();
-      this.a = this.aspirants[this.id1];
+      //this.a = this.aspirants[this.id1];
       this.name = this.a['name'];
       this.branch = this.a['branch'];
       this.favlang = this.a['favlang'];
