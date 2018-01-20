@@ -13,8 +13,8 @@ albums: Ialbums[];
 response:  Ialbums[];
 start: number;
 limit: number;
-x: any;
-pi: number = 1;
+clickedimage: any;
+//pi: number = 1;
   constructor(private albumservice: AlbumService) {
    // this.albums = this.albumservice.getImages(10,5);
   //this.start = 0;
@@ -24,21 +24,21 @@ pi: number = 1;
   ngOnInit() {
   
   }
-  display(a)
+  display(imagenumber)
   {
-    if( a < 0 || a > 5000)
+    if( imagenumber < 0 || imagenumber > 5000)
     {
       alert("enter a positive and max number is 5000");
     }
-    this.albumservice.getImages(this.start, a).subscribe(response => {
+    this.albumservice.getImages(this.start, imagenumber).subscribe(response => {
       this.albums = response;
       // console.log(this.albums);
      // this.albums = response;
     });
     // console.log(a);
   }
-  displayimage(b)
+  displayimage(imageclicked)
   {
-    this.x = b;
+    this.clickedimage = imageclicked;
   }
 }
